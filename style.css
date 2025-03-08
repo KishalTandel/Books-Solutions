@@ -1,0 +1,292 @@
+*{
+  margin : 0em;
+  padding : 0em;
+}
+
+.hide{
+  display : none;
+}
+
+.dark{
+  background-color : #22222a;
+  color : #ffffff; 
+}
+
+.light{
+  background-color : #ffffff;
+  color : #22222a;
+}
+
+body{
+  transition : background-color 0s ease, color 0s ease, border-color 0s ease,opacity 0s ease;
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  font-family :  Helvetica, sans-serif,Arial;
+}
+
+.info_container{
+  display : flex;
+  flex-direction : column;
+  justify-content : space-between;
+  height : 11.5em;
+  align-items : center;
+  height : 8em;
+  margin-top: 1.5em;
+}
+
+.info_container img{
+  width : 7em;
+  height : auto;
+}
+
+.favicon{
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
+
+.dark .favicon img, .light .favicon img{
+  margin-top: 3em;
+  width: 6em;
+  height: auto;
+}
+
+.name{
+  font-size : 2.3em;
+  width : auto;
+  font-weight : 500;
+  margin-top: 0.5em;
+}
+
+.nav_bar{
+  position : fixed;
+  top : 0em;
+  left : 0em;
+  display : flex;
+  justify-content : space-between;
+  height : 3.3em;
+  width : 100%;
+  transform : translateY(-100%);
+  background-color: inherit;
+  color: inherit;
+  transition: box-shadow 0s ease, transform 0.25s ease;
+}
+
+.dark .nav_bar{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: solid #1a1a1a 0.1em;
+}
+
+.light .nav_bar{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom:  solid #b8b8b8 0.1em;
+}
+
+.web_link{
+  display : flex;
+  justify-content : left;
+  align-items : center;
+  width : auto;
+  margin-left : 0.5em;
+  font-size : 1.8em;
+  font-family :  Montserrat;
+}
+
+.web_link p{
+  cursor: pointer;
+}
+
+.sub_nav{
+  display : flex;
+  width : 50%;
+  justify-content : space-evenly;
+  align-items : center;
+  font-size : 1.2em;
+}
+
+.dark .sub_nav{
+  color: rgb(175, 208, 244);
+}
+
+.light .sub_nav{
+  color:rgb(5, 73, 145);
+}
+
+.toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 300ms ease;
+}
+
+.toggle img{
+  width : 1.3em;
+  height : auto;
+}
+
+.toggle img,.github,.CV,.favicon img:hover{
+  cursor : pointer;
+  opacity : 0.95;
+}
+
+.card_container{
+  width : 45.5em;
+  display : flex;
+  flex-direction : column;
+  flex-wrap : nowrap;
+  justify-content : top;
+  align-items : space-around;
+  height : auto;
+  border-radius : 0.5em;
+}
+
+.card{
+  display : flex;
+  flex-direction: column;
+  justify-content: space between;
+  width : 45em;
+  height : auto;
+  margin-top : 2em;
+  justify-content: space-between;
+}
+
+.sign{
+  font-size: 1.3em;
+  z-index: -1;
+}
+
+.label:hover{
+cursor: pointer;
+}
+
+.sub_content{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.chapter{
+  font-size: 1.25em;
+}
+
+.chapter,.chapter_contents{
+  margin-top: 2em;
+}
+
+.chapter_contents{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height:auto
+}
+
+.title p{
+  font-size: 1.5em;
+}
+
+.border{
+  width:0%;
+  height: 2px;
+  transition: width 250ms ease;
+}
+
+.dark .border{
+  background-color: rgb(175, 208, 244);
+}
+
+.light .border{
+  background-color: rgb(5, 73, 145);
+}
+
+.cent{
+  width: 100%;
+}
+.label{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease;
+}
+
+.web_link p{
+  cursor : pointer;
+  scroll-behavior : smooth;
+  transition : scroll-behaviour 5s ease-in;
+}
+
+.info_container img{
+  width : 7em;
+  height : auto;
+}
+
+
+@media (max-width:799px) {
+ 
+  html,body{
+    overflow-x : hidden;
+  }
+  
+  .nav_bar{
+    height :3em;
+  }
+  
+  .web_link{
+    font-size : 1.6em;
+  }
+  
+  .sub_nav{
+    font-size : 1.1em;
+  }
+  
+  .toggle img{
+    width :1.2em;
+    height : auto;
+  }
+  
+  .info_container{
+    height:7.5em;
+  }
+  
+  .name{
+    margin-top: 2em;
+    font-size : 1.7em;
+  }
+  
+ .dark .favicon img, .light .favicon img{
+    width : 4.5em;
+    height : auto;
+  }
+  
+  .dark .quote_container,.light .quote_container{
+    width : 93.1%;
+    font-size : 0.8em;
+    border-radius : 0.25em;
+    margin-top: -2em;
+    height: auto;
+  }
+  
+  .card_container{
+    width : 98%;
+    height :auto;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .dark .card,.light .card{
+    width : 95%;
+    border-radius : 0.25em;
+  }
+  } 
+
