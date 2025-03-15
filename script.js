@@ -1,15 +1,9 @@
 let body = document.body;
 let toggle = document.querySelector('.toggle');
-let navBar = document.querySelector(".nav_bar");
+let navBar = document.querySelector("nav");
 let name = document.querySelector('.name');
 let favIcon = document.querySelector(".favicon");
 let infoContainer = document.querySelector(".info_container");
-let quoteContainer = document.querySelector(".quote_container")
-let cards = document.querySelectorAll(".card");
-let subLinks = document.querySelectorAll(".web_link p");
-let subNav = document.querySelector(".sub_nav");
-let quotation = document.querySelector('.quotation');
-let author = document.querySelector('.author');
 let darkIcon = document.getElementById('dark_icon');
 let lightIcon = document.getElementById('light_icon');
 let darkToggle = document.getElementById("dark_toggle");
@@ -63,7 +57,7 @@ let object;
 let callBack= (entries) => {
     if (!(entries[0].isIntersecting)){
         navBar.style.transform='translateY(0%)';
-        navBar.style.top=0}else{
+        }else{
         navBar.style.transform='translateY(-100%)'}
 }
 
@@ -86,3 +80,13 @@ label.forEach((ele,idx) =>{
         sign[idx].innerText='+';
     }})
 })
+
+
+let booksSolutions=document.querySelector(".Books_Solutions");
+booksSolutions.addEventListener("click",scrollToTop);
+function scrollToTop(){
+    function step(){
+        window.scrollBy(0,-30);
+        if(window.scrollY>0){ requestAnimationFrame(step)}
+    } requestAnimationFrame(step)
+};
