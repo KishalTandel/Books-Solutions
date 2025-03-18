@@ -86,7 +86,7 @@ let booksSolutions=document.querySelector(".Books_Solutions");
 booksSolutions.addEventListener("click",scrollToTop);
 function scrollToTop(){
     function step(){
-        window.scrollBy(0,-30);
+        window.scrollBy(0,-100);
         if(window.scrollY>0){ requestAnimationFrame(step)}
     } requestAnimationFrame(step)
 };
