@@ -16,17 +16,17 @@ let setTheme = (theme) => {
    if (theme === 'dark'){
        body.classList.remove("light")
        body.classList.add("dark")
-       darkIcon.classList.remove('hide');
-       lightIcon.classList.add('hide');
-       darkToggle.classList.remove('hide');
-       lightToggle.classList.add("hide");
+       darkIcon.classList.remove('hidden');
+       lightIcon.classList.add('hidden');
+       darkToggle.classList.remove('hidden');
+       lightToggle.classList.add("hidden");
     } else{
         body.classList.remove("dark")
         body.classList.add("light")
-        darkIcon.classList.add('hide');
-        lightIcon.classList.remove('hide');
-        darkToggle.classList.add('hide');
-        lightToggle.classList.remove("hide");
+        darkIcon.classList.add('hidden');
+        lightIcon.classList.remove('hidden');
+        darkToggle.classList.add('hidden');
+        lightToggle.classList.remove("hidden");
     }
     rotation += 360;
     toggle.style.transform = `rotate(${rotation}deg)`;
@@ -90,3 +90,15 @@ function scrollToTop(){
         if(window.scrollY>0){ requestAnimationFrame(step)}
     } requestAnimationFrame(step)
 };
+
+let tooltip=document.querySelector('.tooltip');
+
+toggle.addEventListener('mouseover',(e)=>{
+    tooltip.style.left=`${e.clientX-22}px`;
+    tooltip.style.top=`${e.clientY+23}px`;
+    tooltip.classList.remove('hidden')
+})
+
+toggle.addEventListener('mouseleave',()=>{
+    tooltip.classList.add('hidden');
+})
