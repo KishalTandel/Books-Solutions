@@ -3,7 +3,7 @@
   padding : 0em;
 }
 
-.hide{
+.hidden{
   display : none;
 }
 
@@ -155,7 +155,7 @@ main{
 .card{
   display : flex;
   flex-direction: column;
-  justify-content: space between;
+  justify-content: space-between;
   width : 45em;
   height : auto;
   margin-top : 2em;
@@ -166,6 +166,14 @@ main{
   font-size: 1.3em;
   z-index: -1;
   width: 0.5em;
+}
+
+.dark .sign{
+  color:rgb(203, 223, 255);
+}
+
+.light .sign{
+  color:rgb(6, 72, 144);
 }
 
 .label{
@@ -262,6 +270,29 @@ li a:active, li p:active{
   opacity: 0.9;
 }
 
+.tooltip{
+  position: absolute;
+  z-index: 100;
+  height: 1.75em;
+  width: auto;
+  pointer-events: none;
+  text-align: center;
+  font-size: 1em;
+}
+
+.dark .tooltip::after{
+  padding: 0.25em;
+  content: 'Light Mode';
+  background-color: rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.light .tooltip::after{
+  padding: 0.25em;
+  content: 'Dark Mode';
+  background-color: rgba(0, 0, 0, 0.78);
+  color: rgba(255, 255, 255, 0.97);
+}
 
 @media (max-width:799px) {
  
@@ -325,5 +356,11 @@ li a:active, li p:active{
   .title p{
     font-size: 1em;
   }
+
+  .tooltip{
+    display: none;
+  }
+
 }
+
 
