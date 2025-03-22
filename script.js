@@ -109,3 +109,19 @@ toggle.addEventListener('mouseleave',()=>{
     runTimeOut=[]
     tooltip.classList.add('hidden');
 })
+
+let progressBar=document.querySelector('.progress_bar')
+let main=document.querySelector('main')
+let progressBarWidth=() => {
+    let top =-main.getBoundingClientRect().top;
+    let totalHeight =main.scrollHeight-document.documentElement.clientHeight;
+    let scrollPercent = (top/ totalHeight) * 100;
+    progressBar.style.width = scrollPercent + "%";
+  }
+
+window.addEventListener("scroll", progressBarWidth);
+
+let contents=document.querySelectorAll('.content');
+let resizeObject=new ResizeObserver(progressBarWidth);
+contents.forEach((content)=>{
+resizeObject.observe(content)})
