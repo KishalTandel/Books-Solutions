@@ -70,14 +70,37 @@ nav{
   position : fixed;
   top : 0em;
   left : 0em;
-  display : flex;
-  justify-content : space-between;
   height : 4em;
   width : 100%;
   transform : translateY(-100%);
   background-color: inherit;
   color: inherit;
   transition: box-shadow 0s ease, transform 0.25s ease;
+}
+
+.utilities{
+  display : flex;
+  justify-content : space-between;
+  align-items: center;
+  width : 100%;
+  background-color: inherit;
+  color: inherit;
+  height: 100%;
+}
+
+.progress_bar{
+  width:100%;
+  transition: width 0s ease;
+}
+
+.dark .progress_bar{
+  background-color: rgb(203, 223, 255);
+  height:0.1em;
+}
+
+.light .progress_bar{
+  background-color:rgb(6, 72, 144);
+  height:0.105em;
 }
 
 .dark nav{
@@ -156,6 +179,7 @@ main{
   justify-content: center;
   align-items: center;
   width: 100%;
+  height:auto
 }
 
 .card_container{
@@ -372,11 +396,15 @@ li a:active, li p:active{
   }
 
   .title p{
-    font-size: 1em;
+    font-size: 0.75em;
   }
 
   .tooltip{
     display: none;
+  }
+
+  .light .progress_bar{
+    height: 0.1em;
   }
 
 }
