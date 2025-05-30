@@ -233,14 +233,53 @@ justify-content: space-between;
   font-size: 1.25em;
 }
 
-.chapter,.chapter_contents{
-  margin-top: 2em;
+.chapter{
+  margin-top: 1em;
 }
 
-.chapter_contents{
+.chapter{
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.number,.solution{
+  font-size: 0.95em;
+}
+
+.solution{
+   cursor: pointer;
+}
+
+.dark .number{
+  color: rgba(255, 255, 255, 0.856);
+}
+
+.dark .solution{
+  font-weight: 250;
+  color: rgba(255, 255, 255, 0.856);
+}
+
+.light .number{
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.light .solution{
+  font-weight: 330;
+  color: rgb(75, 75, 75);
+}
+
+.light .solution:hover{
+  color: rgb(15, 15, 15);
+}
+
+.dark .solution{
+  font-weight: 330;
+  color: rgb(180, 180, 180);
+}
+
+.dark .solution:hover{
+  color: rgb(240, 240, 240);
 }
 
 .title{
