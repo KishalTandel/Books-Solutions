@@ -446,6 +446,10 @@ li a:active, li p:active{
     height: 0.1em;
   }
 
+  .number,.solution{
+  font-size: 0.55em;
+}
+
 }
 
 
