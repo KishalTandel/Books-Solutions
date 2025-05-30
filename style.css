@@ -243,43 +243,31 @@ justify-content: space-between;
   width: 100%;
 }
 
-.number,.solution{
+.number{
   font-size: 0.95em;
 }
 
 .solution{
    cursor: pointer;
+   font-style: italic;
+   font-size: 0.85em;
+   text-align: center;
 }
 
-.dark .number{
-  color: rgba(255, 255, 255, 0.856);
-}
-
-.dark .solution{
-  font-weight: 250;
-  color: rgba(255, 255, 255, 0.856);
-}
-
-.light .number{
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.light .solution{
-  font-weight: 330;
-  color: rgb(75, 75, 75);
-}
-
-.light .solution:hover{
-  color: rgb(15, 15, 15);
-}
-
-.dark .solution{
-  font-weight: 330;
-  color: rgb(180, 180, 180);
+.dark .solution,.dark .number{
+  opacity:0.75;
 }
 
 .dark .solution:hover{
-  color: rgb(240, 240, 240);
+  opacity:0.85;
+}
+
+.light .solution,.light .number{
+  opacity:0.85;
+}
+
+.light .solution:hover{
+  opacity:0.98;
 }
 
 .title{
@@ -446,8 +434,12 @@ li a:active, li p:active{
     height: 0.1em;
   }
 
-  .number,.solution{
+  .number{
   font-size: 0.55em;
+}
+
+.solution{
+  font-size: 0.45em;
 }
 
 }
