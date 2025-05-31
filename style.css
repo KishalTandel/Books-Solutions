@@ -254,20 +254,34 @@ justify-content: space-between;
    text-align: center;
 }
 
-.dark .solution,.dark .number{
+.dark .solution{
+   font-weight: 270 ;
+   opacity:0.67;
+   color: rgb(214, 214, 214);
+}
+
+.light .solution{
+    font-weight: 375;
+    opacity: 0.8;
+    color: rgb(28, 28, 28);
+}
+
+.dark .number{
   opacity:0.75;
+  color: rgb(214, 214, 214);
 }
 
 .dark .solution:hover{
   opacity:0.85;
 }
 
-.light .solution,.light .number{
-  opacity:0.85;
+.light .number{
+  opacity:0.82;
+  color: rgb(28, 28, 28);
 }
 
 .light .solution:hover{
-  opacity:0.98;
+  opacity:1;
 }
 
 .title{
